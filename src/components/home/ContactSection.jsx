@@ -9,10 +9,7 @@ const ContactSection = () => {
         <h2 id="secondH">Join us Now !</h2>
         <button id="navToContact" class="bg-white text-green-500 p-2 rounded">Contact Us</button>
       </div>
-                
-
-
-
+              
   </div>;
 };
 
