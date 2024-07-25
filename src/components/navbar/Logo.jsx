@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../../assets/logo.jpeg";
 
 const Logo = () => {
   return (
     <div>
-      <h1>Logo</h1>
+      <img className="flex w-12 md:w-20" src={logo} alt="Logo" />
     </div>
   );
 };

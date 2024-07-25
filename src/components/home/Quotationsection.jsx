@@ -1,8 +1,10 @@
 import React from "react";
 import Banner from "../../assets/hero";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Quotationsection = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-gray-300 w-full h-auto flex flex-col md:flex-row p-10">
       <div className="w-full md:w-1/2 flex justify-center items-center">
@@ -47,7 +49,10 @@ const Quotationsection = () => {
           </p>
         </div>
 
-        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-6 uppercase md:w-48">
+        <button
+          onClick={() => navigate("/quotation")}
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-6 uppercase md:w-48"
+        >
           get a quick quote
         </button>
       </div>

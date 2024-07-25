@@ -3,6 +3,7 @@ import Logo from "./navbar/Logo";
 import Nav from "./navbar/Nav";
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,8 +15,10 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex p-4 md:p-10 flex-row bg-white sticky top-0 z-20 justify-between items-center">
-        <Logo />
+      <nav className="flex p-2 flex-row bg-white sticky top-0 z-20 justify-between items-center">
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
         <div className="flex space-x-4 md:space-x-10">
           <Nav />
         </div>
