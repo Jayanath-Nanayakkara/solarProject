@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="md:flex gap-10 hidden text-xl ">
+    <div className="md:flex gap-10 hidden text-xl  ">
       <NavLink to="/" className="text-gray-600 hover:text-gray-900 ">
         Home
       </NavLink>

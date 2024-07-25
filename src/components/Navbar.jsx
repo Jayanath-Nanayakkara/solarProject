@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeClass, setActiveClass] = useState();
 
   const toggleMenu = (e) => {
     e.preventDefault();
