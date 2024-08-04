@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = ({ flexDirection, setMenuOpen }) => {
   return (
-    <div className={`flex flex-row gap-10 text-xl ${flexDirection}`}>
+    <div className={`flex flex-row gap-10 text-xl ${flexDirection} mr-5`}>
       <NavLink
         to="/"
         className="text-gray-600 hover:text-gray-900"
