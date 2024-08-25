@@ -1,0 +1,14 @@
+.nav-link {
+  @apply relative inline-block pb-1;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 bottom-0 bg-black h-0.5;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

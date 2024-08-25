@@ -52,7 +52,7 @@ const Footer = () => {
             <h6 className="font-bold text-lg mb-4">{section.title}</h6>
             <ul>
               {section.items.map((item, idx) => (
-                <li key={idx} className="mb-2">
+                <li key={idx} className="mb-2 cursor-pointer ">
                   {item}
                 </li>
               ))}

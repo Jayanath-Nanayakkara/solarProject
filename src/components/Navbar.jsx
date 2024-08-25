@@ -16,26 +16,28 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex p-2 flex-row bg-white sticky top-0 z-30 justify-between items-center">
-        <NavLink to="/">
+      <nav className="flex p-4 bg-white shadow-md sticky top-0 z-30 justify-between items-center">
+        <NavLink to="/" aria-label="Homepage">
           <Logo />
         </NavLink>
 
-        <div className="md:flex hidden space-x-4 md:space-x-10">
+        <div className="hidden md:flex space-x-6 lg:space-x-8">
           <Suspense fallback={<div>Loading...</div>}>
             <Nav flexDirection="flex-row" />
           </Suspense>
         </div>
 
-        <div className="md:hidden relative">
-          <div
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 z-40 cursor-pointer w-6 h-6"
-            onClick={toggleMenu}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-          >
-            {!menuOpen && <LuMenu className="text-gray-600 w-full h-full" />}
-          </div>
-        </div>
+        <button
+          className="md:hidden p-2 rounded-lg focus:outline-none"
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? (
+            <RxCross2 className="text-gray-600 w-6 h-6" />
+          ) : (
+            <LuMenu className="text-gray-600 w-6 h-6" />
+          )}
+        </button>
       </nav>
 
       <div
@@ -47,15 +49,8 @@ const Navbar = () => {
         style={{ transitionProperty: "transform, opacity" }}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <Nav flexDirection="flex-col pt-11 pl-5" setMenuOpen={setMenuOpen} />
+          <Nav flexDirection="flex-col pt-16 pl-5" setMenuOpen={setMenuOpen} />
         </Suspense>
-        <div
-          className="absolute top-4 right-4 cursor-pointer z-50"
-          onClick={toggleMenu}
-          aria-label="Close menu"
-        >
-          <RxCross2 className="text-black w-6 h-6" />
-        </div>
       </div>
     </>
   );
